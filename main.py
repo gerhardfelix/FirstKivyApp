@@ -18,14 +18,14 @@ class HomeWindow(Screen):
         MainApp.search(self)
     def editBtn(self):
         MainApp.editsave(self)
-    url = 'https://upcnew-7d7e1.firebaseio.com/.json'
+#    url = 'firebaseurl/.json'
 
 class CreateWindow(Screen):
     def c_backBtn(self):
         sm.current = "home"
     def c_saveBtn(self):
         MainApp.savenew(self)
-    url = 'https://upcnew-7d7e1.firebaseio.com/.json'
+#    url = 'firebaseurl/.json'
 
 class WindowManager(ScreenManager):
     pass
@@ -42,9 +42,8 @@ sm.current: "home"
 
 class MainApp(App):
 
-    url = 'https://upcnew-7d7e1.firebaseio.com/.json'
-    auth_key = 'u8I9fJuwEbpFGP3akgTdfOJJdnsnqEEx6SclQfKb'
-
+ #   url = 'firebaseurl/.json'
+ 
     def build(self):
         return sm
 
