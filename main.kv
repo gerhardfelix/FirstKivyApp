@@ -1,0 +1,682 @@
+#-------------------------------------------start of home window-------------------------------------------
+<HomeWindow>:
+    FloatLayout:
+        Label:
+            pos_hint: {'x': 0.45, 'top': 1}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'DATA CUSTOMER'
+            font_size: root.height/15
+        Label:
+            pos_hint: {'x': 0.03, 'top': 0.9}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'KODE : ' 
+            font_size: root.height/30
+        TextInput:
+            id: kodehome_txt
+            pos_hint: {'x': 0.12, 'top': 0.875}
+            size_hint_x: 0.2
+            size_hint_y: 0.05
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+        Button:
+            pos_hint: {'x': 0.25, 'top': 0.82}
+            size_hint_x: 0.07
+            size_hint_y: 0.05
+            text: 'Search'
+            font_size: 0.5*self.height
+            on_release:
+                root.searchBtn()
+        Button:
+            pos_hint: {'x': 0.8, 'top': 0.87}
+            size_hint_x: 0.1
+            size_hint_y: 0.1
+            text: 'New'
+            font_size: 0.5*self.height
+            on_release:
+                root.manager.transition.direction = "up"
+                root.createBtn()
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.75}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Nama : ' 
+            font_size: root.height/40
+        TextInput:
+            id: namahome_txt
+            pos_hint: {'x': 0.18, 'top': 0.715}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.70}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alamathome_txt
+            pos_hint: {'x': 0.18, 'top': 0.665}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.65}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotahome_txt
+            pos_hint: {'x': 0.18, 'top': 0.615}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.60}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Wilayah : ' 
+            font_size: root.height/40
+        TextInput:
+            id: wilayahhome_txt
+            pos_hint: {'x': 0.18, 'top': 0.565}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.55}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'No. Telpon : ' 
+            font_size: root.height/40
+        TextInput:
+            id: telphome_txt
+            pos_hint: {'x': 0.18, 'top': 0.515}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.50}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'No. Fax : ' 
+            font_size: root.height/40
+        TextInput:
+            id: faxhome_txt
+            pos_hint: {'x': 0.18, 'top': 0.465}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.45}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'NPWP : ' 
+            font_size: root.height/40
+        TextInput:
+            id: npwphome_txt
+            pos_hint: {'x': 0.18, 'top': 0.415}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.40}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kontak : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kontakhome_txt
+            pos_hint: {'x': 0.18, 'top': 0.365}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.35}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Jatuh Tempo : ' 
+            font_size: root.height/40
+        TextInput:
+            id: jatemhome_txt
+            pos_hint: {'x': 0.18, 'top': 0.315}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+        Label:
+            pos_hint: {'x': 0.35, 'top': 0.35}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Hari' 
+            font_size: root.height/40
+
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.30}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Sales : ' 
+            font_size: root.height/40
+        TextInput:
+            id: saleshome_txt
+            pos_hint: {'x': 0.18, 'top': 0.265}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.25}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Cara Pembayaran : ' 
+            font_size: root.height/40
+        TextInput:
+            id: carabyrhome_txt
+            pos_hint: {'x': 0.18, 'top': 0.215}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.75}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Keterangan : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kethome_txt
+            pos_hint: {'x': 0.75, 'top': 0.715}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.70}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Faktur : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alfakturhome_txt
+            pos_hint: {'x': 0.75, 'top': 0.665}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.65}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Tagihan : ' 
+            font_size: root.height/40
+        TextInput:
+            id: altagihhome_txt
+            pos_hint: {'x': 0.75, 'top': 0.615}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.60}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota Faktur : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotfakturhome_txt
+            pos_hint: {'x': 0.75, 'top': 0.565}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.55}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Nama Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: namanotahome_txt
+            pos_hint: {'x': 0.75, 'top': 0.515}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.50}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alnotahome_txt
+            pos_hint: {'x': 0.75, 'top': 0.465}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.45}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotnotahome_txt
+            pos_hint: {'x': 0.75, 'top': 0.415}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.40}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kredit Limit : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kremithome_txt
+            pos_hint: {'x': 0.75, 'top': 0.365}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Button:
+            size_hint_x: 0.07
+            size_hint_y: 0.05
+            text: 'Edit'
+            font_size: 0.5*self.height
+            pos_hint: {'x': 0.39, 'top': 0.1}
+            on_release:
+                root.editBtn()
+
+        Button:
+            size_hint_x: 0.07
+            size_hint_y: 0.05
+            text: 'Delete'
+            font_size: 0.5*self.height
+            pos_hint: {'x': 0.51, 'top': 0.1}
+#------------------------------------------end of home window-------------------------------------------
+
+#-------------------------------------------start of create window-------------------------------------------
+<CreateWindow>:
+    FloatLayout:
+        Label:
+            pos_hint: {'x': 0.45, 'top': 1}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'NEW CUSTOMER'
+            font_size: root.height/15
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.8}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kode : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kodenew_txt
+            pos_hint: {'x': 0.18, 'top': 0.765}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.75}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Nama : ' 
+            font_size: root.height/40
+        TextInput:
+            id: namanew_txt
+            pos_hint: {'x': 0.18, 'top': 0.715}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.70}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alamatnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.665}
+            size_hint_x: 0.2
+            size_hint_y: 0.07
+            text: ''
+            font_size: 0.5*self.height/2
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.62}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotanew_txt
+            pos_hint: {'x': 0.18, 'top': 0.580}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.57}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Wilayah : ' 
+            font_size: root.height/40
+        TextInput:
+            id: wilayahnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.53}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.52}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'No. Telpon : ' 
+            font_size: root.height/40
+        TextInput:
+            id: telpnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.48}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.47}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'No. Fax : ' 
+            font_size: root.height/40
+        TextInput:
+            id: faxnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.43}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.42}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'NPWP : ' 
+            font_size: root.height/40
+        TextInput:
+            id: npwpnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.38}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.37}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kontak : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kontaknew_txt
+            pos_hint: {'x': 0.18, 'top': 0.33}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.32}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Jatuh Tempo : ' 
+            font_size: root.height/40
+        TextInput:
+            id: jatemnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.28}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+        Label:
+            pos_hint: {'x': 0.35, 'top': 0.315}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Hari' 
+            font_size: root.height/40
+
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.27}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Sales : ' 
+            font_size: root.height/40
+        TextInput:
+            id: salesnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.23}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.04, 'top': 0.22}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Cara Pembayaran : ' 
+            font_size: root.height/40
+        TextInput:
+            id: carabyrnew_txt
+            pos_hint: {'x': 0.18, 'top': 0.18}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.75}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Keterangan : ' 
+            font_size: root.height/40
+        TextInput:
+            id: ketnew_txt
+            pos_hint: {'x': 0.75, 'top': 0.715}
+            size_hint_x: 0.2
+            size_hint_y: 0.07
+            text: ''
+            font_size: 0.5*self.height/2
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.67}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Faktur : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alfakturnew_txt
+            pos_hint: {'x': 0.75, 'top': 0.63}
+            size_hint_x: 0.2
+            size_hint_y: 0.07
+            text: ''
+            font_size: 0.5*self.height/2
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.585}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Tagihan : ' 
+            font_size: root.height/40
+        TextInput:
+            id: altagihnew_txt
+            pos_hint: {'x': 0.75, 'top': 0.545}
+            size_hint_x: 0.2
+            size_hint_y: 0.07
+            text: ''
+            font_size: 0.5*self.height/2
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.5}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota Faktur : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotfakturnew_txt
+            pos_hint: {'x': 0.75, 'top': 0.461}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.45}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Nama Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: namanotanew_txt
+            pos_hint: {'x': 0.75, 'top': 0.41}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.4}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Alamat Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: alnotanew_txt
+            pos_hint: {'x': 0.75, 'top': 0.36}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.35}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kota Nota : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kotnotanew_txt
+            pos_hint: {'x': 0.75, 'top': 0.31}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Label:
+            pos_hint: {'x': 0.62, 'top': 0.3}
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: 'Kredit Limit : ' 
+            font_size: root.height/40
+        TextInput:
+            id: kremitnew_txt
+            pos_hint: {'x': 0.75, 'top': 0.26}
+            size_hint_x: 0.2
+            size_hint_y: 0.035
+            text: ''
+            multiline: False
+            font_size: 0.5*self.height
+
+        Button:
+            size_hint_x: 0.07
+            size_hint_y: 0.05
+            text: 'Save'
+            font_size: 0.5*self.height
+            pos_hint: {'x': 0.39, 'top': 0.1}
+            on_release:
+                root.c_saveBtn()
+
+        Button:
+            size_hint_x: 0.1
+            size_hint_y: 0.05
+            text: 'Back'
+            font_size: 0.5*self.height
+            pos_hint: {'x': 0.1, 'top': 0.9}
+            on_release:
+                root.manager.transition.direction = "down"
+                root.c_backBtn()
+#-------------------------------------------end of create window-------------------------------------------
